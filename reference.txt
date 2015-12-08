@@ -1,1 +1,38 @@
-hiehrfieuhrf
+git fetch origin: fetches latest history from the server
+
+git add <filename>:add one or more files to staging.
+
+git commit -m "message":commit changes to head(but not yet to the remote repository)
+
+git reset : Drops all local changes and commits, fetches the latest history from the server and point the local master branch at it.
+
+git clone /path/to/repository: create a working copy of a local repository (can be done with URL)
+
+git config --global user.name "Name Name": cofigure the author name to be used with commits
+
+git config --global user.email example@email.com: cofigure the author to be used with commits
+
+git init: create a  new local repository
+
+git push origin master: send changes to the master branch (directory) of your remote repository
+
+git push origin <name>: Push the branch to your remote repository, so others can use it:
+
+git push --all origin: Push all branches to your remote repository
+
+git push origin :<branchname> : delete a branch on your remote repository
+
+git status: List files you have changed, but still need to commit or push
+
+git remote -v: list all currently configured remote repositories
+
+git checkout <SHA/branchname>: switch from one branch to another. Also could be used to make head a more aged file
+
+git branch: lists all branch in repo
+
+git branch -d <branchname>: delete this.branch
+
+git pull: Fetch and merge changes on the remote server to your working directory
+
+git log: CommitId is the leading characters of the changeset ID, up to 10, but must be unique. *SHA is first 6 numb
+ers of the ID
