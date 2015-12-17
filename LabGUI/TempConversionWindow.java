@@ -64,11 +64,13 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	if(event.equals("CtoF")){//method1
 	    String s = "";
 	    s += (num * (9.0/5.0) + 32);
+	    s += " F";
 	    j.setText(s);
 	}
 	if(event.equals("FtoC")){//method2
 	    String s = "";
 	    s += ((num - 32) * (5.0/9.0));
+	    s += " C";
 	    j.setText(s);
 	} 
     }
