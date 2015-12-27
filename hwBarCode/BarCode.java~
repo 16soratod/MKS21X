@@ -31,7 +31,7 @@ public class BarCode implements Comparable{
     private int checkSum(){
 	int ret = 0;
 	for(int i = 0; i < _zip.length()-1; i++){
-	    ret += Integer.parseInt(String.valueOf(_zip.charAt(i)));
+	    ret += Integer.parseInt(_zip.substring(i,i+1));
 	}
 	ret = ret %10;
 	return ret;
@@ -44,7 +44,8 @@ public class BarCode implements Comparable{
 	//int num = Integer.parseInt(_zip.substring(i,i+1));
 	for (int i = 0; i < _zip.length()-1; i++){
 	    bar += _bars[Integer.parseInt(String.valueOf(_zip.charAt(i)))];
-	}
+	}//the substring idea on both checkSum() and toString() was introduced by Jackie Xu fom pd. 7
+	//I had a code that used charAt(i) to find the num and then Character.getNumericValue which converts into a number to put in that array. This way was more creative and less time consuming 
 	return _zip + _checkDigit + " |" + bar + " |";
     }
 
